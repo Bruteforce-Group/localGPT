@@ -7,15 +7,15 @@ sentence-transformers
 faiss-cpu
 huggingface_hub
 transformers
-protobuf==3.20.0; sys_platform != 'darwin'
-protobuf==3.20.0; sys_platform == 'darwin' and platform_machine != 'arm64'
-protobuf==3.20.3; sys_platform == 'darwin' and platform_machine == 'arm64'
+protobuf==4.25.8; sys_platform != 'darwin'
+protobuf==4.25.8; sys_platform == 'darwin' and platform_machine != 'arm64'
+protobuf==4.25.8; sys_platform == 'darwin' and platform_machine == 'arm64'
 auto-gptq==0.2.2
 docx2txt
 unstructured
 
 # Utilities
-urllib3==1.26.6
+urllib3==2.5.0
 accelerate
 bitsandbytes ; sys_platform != 'win32'
 bitsandbytes-windows ; sys_platform == 'win32'
@@ -29,3 +29,4 @@ Streamlit-extras
 
 # Excel File Manipulation
 openpyxl
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
